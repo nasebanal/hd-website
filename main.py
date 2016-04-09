@@ -13,6 +13,8 @@ import pprint
 import urllib
 import re
 import json
+import translate
+
 
 PB_WIKI = 'dojowebsite'
 PB_API_URL = 'http://%s.pbworks.com/api_v2/op/GetPage/page/%s'
@@ -20,6 +22,7 @@ CACHE_ENABLED = True
 CDN_ENABLED = False
 CDN_HOSTNAME = 'http://cdn.hackerdojo.com'
 LOCAL_TZ = 'America/Los_Angeles'
+LOCALE = 'en'
 
 if os.environ['SERVER_SOFTWARE'].startswith('Dev'):
     CACHE_ENABLED = False
@@ -46,6 +49,15 @@ def _request(url, cache_ttl=3600, force=False):
                 resp = {}
     return resp
 
+def get_text(lang):
+
+    if hasattr(translate,lang):
+        text=getattr(translate,lang)
+    else:
+        text=translate.en
+
+    return text
+
 class PBWebHookHandler(webapp.RequestHandler):
     def post(self):
         page = self.request.get('page')
@@ -60,6 +72,8 @@ class PBWebHookHandler(webapp.RequestHandler):
 class IndexHandler(webapp.RequestHandler):
     def get(self):
         version = os.environ['CURRENT_VERSION_ID']
+        msgs = get_text(LOCALE)
+
         if CDN_ENABLED:
             cdn = CDN_HOSTNAME
         self.response.out.write(template.render('templates/index.html', locals()))
