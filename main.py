@@ -64,12 +64,14 @@ class IndexHandler(webapp.RequestHandler):
             cdn = CDN_HOSTNAME
         self.response.out.write(template.render('templates/index.html', locals()))
 
+
 class StaffHandler(webapp.RequestHandler):
     def get(self):
         staff = _request('http://hackerdojo-signin.appspot.com/staffjson')
         version = os.environ['CURRENT_VERSION_ID']
         if CDN_ENABLED:
             cdn = CDN_HOSTNAME
+        test = "test"
         self.response.out.write(template.render('templates/event_staff.html', locals()))
 
 class MainHandler(webapp.RequestHandler):
