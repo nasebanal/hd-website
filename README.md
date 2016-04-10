@@ -1,4 +1,4 @@
-# Hacker Dojo Web-Site for Global
+# Web site for Hacker Dojo Global Network
 
 Hacker Dojo is non-profit coworking space originated in Mountain View, California. Hacker Dojo distributes the source code for their operation software, and this is folked project in order to internationalize their assets with continuous integration environment.
 
