@@ -3,7 +3,6 @@
 import os
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
-import pytz
 from google.appengine.api import memcache
 from google.appengine.api import urlfetch
 from google.appengine.ext import webapp
