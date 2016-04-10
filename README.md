@@ -37,3 +37,6 @@ The Dojo Website CMS is extremely simple (less than 100 lines of code), but offe
 * The JS and CSS will be cached by the CDN, so the URLs are versioned automatically by App Engine.  Deploying a new version automatically increments the version.
 * HTML is space-optimized .. view source on it ;)
 * When debugging locally, the CDN and wiki cache are disabled.
+
+
+[![Build Status](https://travis-ci.org/nasebanal/hd-website.svg)](https://travis-ci.org/nasebanal/hd-website)
