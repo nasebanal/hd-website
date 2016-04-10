@@ -13,7 +13,7 @@ import pprint
 import urllib
 import re
 import json
-import translate
+import translate.JP as translate
 
 
 PB_WIKI = 'dojowebsite'
@@ -22,7 +22,6 @@ CACHE_ENABLED = True
 CDN_ENABLED = False
 CDN_HOSTNAME = 'http://cdn.hackerdojo.com'
 LOCAL_TZ = 'America/Los_Angeles'
-LOCALE = 'en'
 
 if os.environ['SERVER_SOFTWARE'].startswith('Dev'):
     CACHE_ENABLED = False
@@ -49,12 +48,12 @@ def _request(url, cache_ttl=3600, force=False):
                 resp = {}
     return resp
 
-def get_text(lang):
+def get_text(type="local"):
 
-    if hasattr(translate,lang):
-        text=getattr(translate,lang)
+    if hasattr(translate,type):
+        text=getattr(translate,type)
     else:
-        text=translate.en
+        text=translate.default
 
     return text
 
@@ -70,12 +69,17 @@ class PBWebHookHandler(webapp.RequestHandler):
         self.response.out.write("200 OK")
 
 class IndexHandler(webapp.RequestHandler):
-    def get(self):
+    def get(self, locale=""):
         version = os.environ['CURRENT_VERSION_ID']
-        msgs = get_text(LOCALE)
+
+        if locale is "":
+            text = get_text("local")
+        else:
+            text = get_text(locale)
 
         if CDN_ENABLED:
             cdn = CDN_HOSTNAME
+
         self.response.out.write(template.render('templates/index.html', locals()))
 
 
@@ -150,5 +154,6 @@ app = webapp.WSGIApplication([
     ('/api/pbwebhook', PBWebHookHandler),
     ('/api/event_staff', StaffHandler),
     ('/', IndexHandler),
+    ('/lang/(.+)', IndexHandler),
     ('/(.+)', MainHandler)],
     debug=True)

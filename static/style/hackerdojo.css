@@ -4,6 +4,25 @@ body {
 	font-size: 12px;
 }
 
+
+div.language {
+    color: #000;
+    display: block;
+    float: right;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 55px;
+}
+
+div.language a:visited {
+    color:black;
+}
+
+div.language a.selected {
+    color: #009cd3;
+    font-weight: bold;
+}
+
 nav {
 	font-family: 'myriad pro', myriad, 'trebuchet ms',sans-serif;
 	float: right;
@@ -27,7 +46,6 @@ nav a.selected {
 	color: #009cd3;
 	font-weight: bold;
 }
-
 
 a {
 	color: #009cd3;

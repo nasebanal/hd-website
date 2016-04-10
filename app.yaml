@@ -1,4 +1,4 @@
-application: hd-website
+application: hdj-website
 version: 4
 runtime: python27
 threadsafe: true
