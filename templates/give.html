@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}{{text.give_submenu_title}}{% endblock %}
+{% block content %}
+
+  <style>h2.tagline {display:none}</style>
+  
+  <div id="content" class="wikihtml">
+    <p style="margin-top:1em; padding-bottom:1em; margin-bottom:2em; border-bottom:1px dotted #ccc; font-size:12px; font-weight:bold"><a href="/">Home</a> &gt; {{text.give_submenu_title}}</p>
+    {% autoescape off %}
+
+    <h1 style="text-align: left;">{{text.give_page_title}}</h1>
+
+    <div style="float: right; width: 240px;"><p>
+        <h2><span id="cursor-434281">&nbsp;</span>{{text.give_list_title}}</h2>
+        
+        <ul style="margin-left: 20px; padding-left: 20px;">
+            <li><a href="/Give">Donate Online</a><span style="font-size: 13px; line-height: 1.5em;">&nbsp;</span></li>
+            <li><a href="/10bitDonors">Join a Donor Circle</a></li>
+            <li><a search_id="undefined" target="_blank" href="http://mkt.com/hacker-dojo">Get Some Swag!</a></li>
+            <li><a href="/HonorALovedOne">Honor a Loved One</a></li>
+            <li><a href="/Sponsorship">Be a Business Partner</a></li>
+            <li><a href="/RunningAFundraiser">Run a Fundraiser!</a></li>
+        </ul><p>&nbsp;</p>
+        
+        <ul style="margin-left: 20px; padding-left: 20px;"></ul></p>
+
+        <p><h2>{{text.give_sponsor_list}}</h2><p>&nbsp;</p>
+        <p><a href="http://www.samsung.com/us/"><img src="http://i.imgur.com/zwlaFBE.png?1" title="source: imgur.com" /></a></p><p>&nbsp;</p>
+        <p><a href="https://www.elance.com/"><img src="http://i.imgur.com/GOwHyw8.jpg?1" title="source: imgur.com" /></a></p><p>&nbsp;</p>
+        <p><a href="https://www.perkinscoie.com/en/index.html"><img src="http://i.imgur.com/pakNlAV.png?1" title="source: imgur.com" /></a></p><p>&nbsp;</p>
+        <p>[<a href="/Sponsorship">Your company logo here!</a>]</p></p></div>
+
+    <div style="float: left; width: 700px;">
+
+        <h2></h2><h2>{{text.give_section1_title}}</h2><p>&nbsp;</p>
+
+        <p>Since opening our doors in 2009, Hacker Dojo has been both a strong community and a great    place to throw hackathons, conferences, classes, movie nights, and job    fairs. We've fostered startups from Pinterest to WordLens, and  provided a launching point for countless others. We've provided a home  to open source projects like OpenPhoto, and a community beyond any  particular project: a place to meet friends, partners in crime, and to  learn from each other.</p><p>&nbsp;</p>
+
+        <h2>{{text.give_section2_title}}</h2><p>&nbsp;</p>
+        <div style="float: left; padding-right: 20px;"><p style="text-align: center;">&nbsp;</p><div><script type="text/javascript">// <![CDATA[
+var EB = EB || {};
+EB.button_stack = EB.button_stack || [];
+EB.button_stack.push( {
+            anchor_id: "everbutton-261-1394654231-21",
+                button_id: 261,
+                    button_type: "donate",
+                        button_options: {
+                                donor_chooses: true,
+                                        allow_cover_fee: true,
+                                                enable_recurring: true,
+                                                        allow_anonymous: true,
+                                                                reference_id: "",
+                                                                        redirect_uri: ""
+                                                                            }
+                                                                            });
+if (!EB.script) {
+        EB.script = document.createElement('script');
+            EB.script.type = 'text/javascript';
+                EB.script.async = true;
+                    EB.script.src = 'https://www.everbutton.com/assets/everbutton.v1.js?button_id=261';
+                        var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(EB.script, s);
+} else if (EB.load_buttons) {
+        EB.load_buttons();
+}
+// ]]></script></div><p>&nbsp;</p>
+
+        <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="VTC79J5PZ6SCS"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Donate with Paypal"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form></p><p>&nbsp;</p></div>
+
+    <p>For too long the Dojo has paid to improve other people's buildings. It is our goal to purchase property to build our own facility, how we envision it. After we have finished paying for it, this will amount to getting rid of our largest recurring expense and more money that can be spent on more tools, programs, classes, and all the things which make the Dojo unique.</p><p>&nbsp;</p><p>&nbsp;</p><br /><p>
+    <p style="margin: 1em; padding: 1em; border: 1px solid #cccccc;">Yes, we are a <a href="/501c3Information">501(c)(3)</a>! Our EIN is 26-4812213. Your gift is tax deductible to the full extent provided by law, less the  fair market value of any substantial gifts chosen at the time of your  donation. Remember, many employers <a href="/MatchingGift">match charitable gifts</a>. Ask your employer if they will double  your contribution!</p><p>&nbsp;</p></p></div><p>&nbsp;</p>
+    {% endautoescape %}
+  </div>
+
+{% endblock %}
+
+{% block side %}
+  <ul id="side">
+    <li><a href="/attend"><img src="/static/images/next.png" width="231" height="41" /></a></li>
+  </ul>
+{% endblock %}

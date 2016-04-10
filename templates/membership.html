@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}{{text.membership_submenu_title}}{% endblock %}
+{% block content %}
+
+  <style>h2.tagline {display:none}</style>
+  
+  <div id="content" class="wikihtml">
+    <p style="margin-top:1em; padding-bottom:1em; margin-bottom:2em; border-bottom:1px dotted #ccc; font-size:12px; font-weight:bold"><a href="/">Home</a> &gt; {{text.membership_submenu_title}}</p>
+    {% autoescape off %}
+
+    <h2>{{text.membership_page_title}}</h2>
+
+    <table border="0" cellpadding="2" cellspacing="2">
+        <tbody><tr><td><p><a href="http://signup.hackerdojo.com/"><img src="http://hackerdojo.com/static/images/cardlogos.gif" width="178" border="0" height="30" /></a></p></td><td>&nbsp;&nbsp;</td><td><form action="http://signup.hackerdojo.com/"><h3><a href="http://signup.hackerdojo.com/">Signup Now</a></h3></form></td><td><form action="http://signup.hackerdojo.com/reactivate"><h3><strong>or</strong>&nbsp;<a href="http://signup.hackerdojo.com/reactivate">Reactivate Account</a></h3></form></td></tr></tbody>
+    </table>
+    
+    <p><span style="font-family: 'Segoe UI', 'Lucida Grande', Arial, sans-serif; font-size: 17px; font-weight: bold; line-height: 1.25em;">&nbsp;</span></p><p>Congratulations! &nbsp;You are joining an awesome tech community!</p><p>&nbsp;</p><p>Members <em><strong>are</strong></em> the backbone of Hacker Dojo and without you there would not be an us. &nbsp;A bunch of us joined together in <a target="_blank" href="http://wiki.hackerdojo.com/History">2009 to lease a warehouse</a>, and we've been growing ever since.</p><p>&nbsp;</p>
+    
+    <p><span style="font-size: 200%;"><strong>{{text.membership_option}}</strong></span></p>
+    <p><span style="font-size: 150%;"><strong><a href="http://signup.hackerdojo.com/"><img src="http://i.imgur.com/fNugPQM.jpg" style="width: 75%; height: 75%"></a></strong></span></p>
+    <p><span style="font-family: 'Segoe UI', 'Lucida Grande', Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 1.25em;">*Nights start 5pm - 8am</span></p><h4></h4>
+    
+    <h3><a href="http://signup.hackerdojo.com/?plan=newyearly">{{text.membership_yearly_discount}}</a></h3>
+    <p>$1,950 for one year ( instead of $2,340 - save $390! )</p>
+    <p>Sign up for the 24/7 shared space&nbsp;<a href="http://signup.hackerdojo.com/?plan=newyearly">yearly plan</a>!&nbsp;</p><p>&nbsp;</p>
+    <p>Please note that this plan is non-refundable.</p><p>&nbsp;</p><p>&nbsp;</p>
+
+    <h3><a href="mailto:marie.knox@hackerdojo.com">{{text.membership_5year_discount}}</a></h3>
+    <p>If you pay for your Hacker Dojo 24/7 shared space&nbsp;membership five (5) years in advance, you can receive a $6,700 discount!!! Wow!</p><p>&nbsp;</p>
+    <p>You also will get your name on a plaque, to say thank you for your donation.</p><p>&nbsp;</p><p>Simply sign up for the five year plan for an upfront cost of $5,000 by emailing employees@hackerdojo.com</p><p>&nbsp;</p>
+    <p><span style="font-size: 13px;">Please note that this plan is non-refundable.&nbsp;</span></p><p>&nbsp;</p>
+
+    <h3><a href="/StudentRateApplication">{{text.membership_student_discount}}</a></h3>
+    <p>Only $60/month for students!</p><p>&nbsp;</p><p>Are you actively taking classes full time at an accredited university? If you are able to provide both a current schedule and a student ID card, then you can <a href="/StudentRateApplication">apply here</a>!</p>
+    <p><br /><a href="http://signup.hackerdojo.com"><img src="http://i.imgur.com/f5OMxro.png" style="width: 50%; height: 50%;"></a></p><p>&nbsp;</p>
+
+    <h3><a href="http://signup.hackerdojo.com/reactivate">{{text.membership_reactivate}}</a></h3>
+    <div style="border: 1px solid #000000; position: absolute; top: 709px; left: 3px; width: 322px; height: 24px; z-index: -1;"></div>
+    <div style="border: 1px solid #000000; position: absolute; top: 726px; left: 318px; width: 16px; height: 16px; z-index: 102; cursor: se-resize; background-color: #ffffff;" title="Drag to resize image"></div>
+
+    {% endautoescape %}
+  </div>
+
+{% endblock %}
+
+{% block side %}
+  <ul id="side">
+    <li><a href="/attend"><img src="/static/images/next.png" width="231" height="41" /></a></li>
+  </ul>
+{% endblock %}

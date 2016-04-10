@@ -67,20 +67,6 @@ class PBWebHookHandler(webapp.RequestHandler):
             memcache.delete(failure_cache_key)
         self.response.out.write("200 OK")
 
-class IndexHandler(webapp.RequestHandler):
-    def get(self, locale=""):
-        version = os.environ['CURRENT_VERSION_ID']
-
-        if locale is "":
-            text = get_text("local")
-        else:
-            text = get_text(locale)
-
-        if CDN_ENABLED:
-            cdn = CDN_HOSTNAME
-
-        self.response.out.write(template.render('templates/index.html', locals()))
-
 
 class StaffHandler(webapp.RequestHandler):
     def get(self):
@@ -88,11 +74,38 @@ class StaffHandler(webapp.RequestHandler):
         version = os.environ['CURRENT_VERSION_ID']
         if CDN_ENABLED:
             cdn = CDN_HOSTNAME
-        test = "test"
-        self.response.out.write(template.render('templates/event_staff.html', locals()))
+        self.getresponse.out.write(template.render('templates/event_staff.html', locals()))
+
 
 class MainHandler(webapp.RequestHandler):
+    def get(self, locale="local", pagename="index"):
+        print "locale=",locale
+        print "pagename=",pagename
+        version = os.environ['CURRENT_VERSION_ID']
+
+        text = get_text(locale)
+
+        if CDN_ENABLED:
+            cdn = CDN_HOSTNAME
+
+        if pagename == "index":
+            self.response.out.write(template.render('templates/index.html', locals()))
+        elif pagename == "Membership":
+            self.response.out.write(template.render('templates/membership.html', locals()))
+        elif pagename == "About":
+            self.response.out.write(template.render('templates/about.html', locals()))
+        elif pagename == "Contact":
+            self.response.out.write(template.render('templates/contact.html', locals()))
+        elif pagename == "Give":
+            self.response.out.write(template.render('templates/give.html', locals()))
+        else:
+            self.response.out.write(template.render('templates/404.html', locals()))
+            self.response.set_status(404)
+
+
+class ExternalHandler(webapp.RequestHandler):
     def get(self, pagename, site = PB_WIKI):
+        print "pagename="+pagename
         skip_cache = self.request.get('cache') == '0'
         version = os.environ['CURRENT_VERSION_ID']
         shouldRedirect = False
@@ -152,7 +165,7 @@ class MainHandler(webapp.RequestHandler):
 app = webapp.WSGIApplication([
     ('/api/pbwebhook', PBWebHookHandler),
     ('/api/event_staff', StaffHandler),
-    ('/', IndexHandler),
-    ('/lang/(.+)', IndexHandler),
-    ('/(.+)', MainHandler)],
+    ('/external/(.+)', ExternalHandler),
+    ('/', MainHandler),
+    ('/(.+)/(.*)', MainHandler)],
     debug=True)

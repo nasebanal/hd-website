@@ -4,6 +4,8 @@
 default={}
 local={}
 
+# translation in base.html
+
 default['lang_default']=u'English'
 local['lang_default']=u'English'
 
@@ -32,10 +34,13 @@ default['menu_about']=u'ABOUT'
 local['menu_about']=u'Hacker Dojoとは'
 
 default['menu_contact']=u'CONTACT'
-local['menu_contact']=u'コンタクト'
+local['menu_contact']=u'お問い合わせ'
 
 default['menu_give']=u'GIVE'
 local['menu_give']=u'ご支援'
+
+
+# Translation in index.html
 
 default['content_welcome']=u'Welcome to Hacker Dojo Japan'
 local['content_welcome']=u'Hacker Dojo Japanへようこそ'
@@ -98,3 +103,74 @@ local['footer_email']=u'info-japan@hackerdojo.com'
 default['footer_twitter']=u'hackerdojo_japan'
 local['footer_twitter']=u'hackerdojo_japan'
 
+
+# translation in membership.html
+
+default['membership_submenu_title']=u'Membership'
+local['membership_submenu_title']=u'メンバーシップ'
+
+default['membership_page_title']=u'Join Hacker Dojo'
+local['membership_page_title']=u'Dojoに参加してみませんか?'
+
+default['membership_option']=u'Membership Options'
+local['membership_option']=u'メンバーシップオプション'
+
+default['membership_yearly_discount']=u'Yearly Discount Plan'
+local['membership_yearly_discount']=u'1年会員プラン'
+
+default['membership_5year_discount']=u'Five Year Discount Plan'
+local['membership_5year_discount']=u'5年会員プラン'
+
+default['membership_student_discount']=u'Student Discount'
+local['membership_student_discount']=u'学生会員プラン'
+
+default['membership_reactivate']=u'Reactivate Account'
+local['membership_reactivate']=u'復帰会員プラン'
+
+
+# translation in about.html
+
+default['about_submenu_title']=u'About'
+local['about_submenu_title']=u'Hacker Dojoとは'
+
+default['about_page_title']=u'Who We Are'
+local['about_page_title']=u'運営主体'
+
+default['about_list_title']=u'Learn More'
+local['about_list_title']=u'詳細情報'
+
+default['about_section1_title']=u'What We Are'
+local['about_section1_title']=u'活動内容'
+
+default['about_section2_title']=u'Amenities'
+local['about_section2_title']=u'利用可能施設'
+
+
+# translation in contact.html
+
+default['contact_submenu_title']=u'Contact'
+local['contact_submenu_title']=u'お問い合わせ'
+
+default['contact_page_title']=u'Contact List'
+local['contact_page_title']=u'お問い合わせ先一覧'
+
+
+# translation in give.html
+
+default['give_submenu_title']=u'Give'
+local['give_submenu_title']=u'ご支援'
+
+default['give_page_title']=u'Give to Hacker Dojo'
+local['give_page_title']=u'Hacker Dojoへのご支援'
+
+default['give_section1_title']=u'Who We Are'
+local['give_section1_title']=u'運営主体'
+
+default['give_section2_title']=u'The Dream: A Home of Our Own'
+local['give_section2_title']=u'ドリーム： 私達の出発点'
+
+default['give_list_title']=u'Ways to Give'
+local['give_list_title']=u'ご支援の方法'
+
+default['give_sponsor_list']=u'2015 Sponsors'
+local['give_sponsor_list']=u'2015年度スポンサー'

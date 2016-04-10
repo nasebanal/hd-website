@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}{{text.about_submenu_title}}{% endblock %}
+{% block content %}
+
+  <style>h2.tagline {display:none}</style>
+  
+  <div id="content" class="wikihtml">
+    <p style="margin-top:1em; padding-bottom:1em; margin-bottom:2em; border-bottom:1px dotted #ccc; font-size:12px; font-weight:bold"><a href="/">Home</a> &gt; {{text.about_submenu_title}}</p>
+    {% autoescape off %}
+
+    <h2>{{text.about_page_title}}</h2>
+    <p><div style="float: right;">
+    
+        <h2>{{text.about_list_title}}</h2>
+        <ul><li><a href="/501c3Information">501c3 Information</a></li>
+            <li><a href="/HowToDojo">How To Dojo</a></li>
+            <li><a href="/BrandingAndLogo">Media Kit</a></li>
+            <li><a href="/Membership">Membership</a></li>
+            <li><a href="/HarassmentPolicy">Harassment Policy</a></li>
+            <li><a href="/Mission">Mission</a></li>
+            <li><a href="/Tours">Visiting &amp; Tours</a></li>
+        </ul>
+    <p>&nbsp;</p></div></p>
+    <p><div style="float: right; padding: 0 0 1em 1em; width: 360px;"><a href="http://imgur.com/4m548yT"><img src="http://i.imgur.com/4m548yT.jpg?1" title="Hosted by imgur.com" /></a><style="border: 1px solid black;" width="360" /&gt;
+
+    <p style="margin-top: .4em;"><small>Hacker Dojo is open 24/7 to members.</small></p></div></p>
+    <p>Hacker Dojo is a community of members who share a common love of creating wonderful things and understanding how the world works.&nbsp;<strong>You don't need to be a programmer to use/enjoy the space.</strong>&nbsp;&nbsp; Think of us a college: the people that make up the Dojo are really amazing and what make it special.&nbsp; Good chance you will meet your cofounder or the CEO of the next explosive startup at the Dojo.&nbsp;</p><p>&nbsp;</p>
+
+    <p><b><span style="font-size: 130%;">{{text.about_section1_title}}</span></b></p>
+<p>Hacker Dojo is a tech hub in Mountain View that is one part working space, one part events venue, and one part maker space.&nbsp; We are the perfect place to launch a software startup or build a robot.&nbsp; We have both personal desk space (The Hive ) and shared desk space for Hacker Dojo members.</p><p>&nbsp;</p>
+
+<p><b><span style="font-size: 130%;">{{text.about_section2_title}}</span></b></p>
+<p>We love new members!&nbsp;<span style="color: #000000; font-family: Verdana, Arial, sans-serif; font-size: 100%;">Please feel free to stop by the Dojo and test-drive us for a day!</span></p><p>Members benefits: 250 megabit bidirectional fiber internet, coffee and kitchen, outdoor seating &amp; grilling, electronics lab, library, small and large office spaces throughout the facility, small and large event spaces throughout the facility, phones from our&nbsp;<a href="/Mobile%20Device%20Lab">mobile device lab</a>, gaming lounge, ping pong, pool table, social space, and more</p><p>&nbsp;</p><div></div>
+    {% endautoescape %}
+  </div>
+
+{% endblock %}
+
+{% block side %}
+  <ul id="side">
+    <li><a href="/attend"><img src="/static/images/next.png" width="231" height="41" /></a></li>
+  </ul>
+{% endblock %}

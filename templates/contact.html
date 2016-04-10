@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}{{text.contact_submenu_title}}{% endblock %}
+{% block content %}
+
+  <style>h2.tagline {display:none}</style>
+  
+  <div id="content" class="wikihtml">
+    <p style="margin-top:1em; padding-bottom:1em; margin-bottom:2em; border-bottom:1px dotted #ccc; font-size:12px; font-weight:bold"><a href="/">Home</a> &gt; {{text.contact_submenu_title}}</p>
+    {% autoescape off %}
+
+    <h2>{{text.contact_page_title}}</h2>
+    <p>Hacker Dojo is run by members and staff. &nbsp;Ping if you have a question or concern!</p>
+    
+    <table class="contact">
+        <tbody><tr><td>Information</td><td><a href="mailto:info@hackerdojo.com">info@hackerdojo.com</a></td><td>Staff and Volunteer email list.&nbsp; Good default if you don't know who to email. &nbsp;Best email to use if you need a quick response or over the weekend&nbsp;</td></tr><tr><td>Staff</td><td>employees@hackerdojo.com</td><td>Questions which only staff should follow. &nbsp;Venue rentals, sponsorships, and partnership inquiries.</td></tr><tr><td><a href="http://groups.google.com/a/hackerdojo.com/group/operations">Operations</a></td><td><a href="mailto:operations@hackerdojo.com">operations@hackerdojo.com</a></td><td>Questions or concerns about physical facilities. &nbsp;Please report building issues, kitchen, or other general issues.</td></tr><tr><td><a href="http://groups.google.com/a/hackerdojo.com/group/events">Events</a></td><td><a href="http://wiki.hackerdojo.com/Contacting%20Events%20Team">events@</a></td><td>Questions about events (meetups, classes, hackathons etc). Please read&nbsp;<a href="http://www.hackerdojo.com/EventsFAQ">Events FAQ</a>&nbsp;before contacting events@</td></tr><tr><td><a href="https://groups.google.com/a/hackerdojo.com/forum/#!forum/makers">Makerbot</a></td><td>makerbot@hackerdojo.com</td><td>For questions about the makerspace</td></tr><tr><td><a href="http://groups.google.com/a/hackerdojo.com/group/internet">Internet</a></td><td><a href="mailto:internet@hackerdojo.com">internet@hackerdojo.com</a></td><td>Questions about internet</td></tr><tr><td>I Want To Help</td><td>iwanttohelp@hackerdojo.com</td><td>Want to volunteer but don't know what teams need folks? Email here</td></tr><tr><td>Jun Wong</td><td>jun.wong@hackerdojo.com</td><td>Interim Executive Director</td></tr>
+        </tbody>
+    </table>
+    
+    <p><span style="font-size: 13px; line-height: 1.5em;">NOTE: Any member interested&nbsp;</span><strong style="font-family: inherit; font-style: inherit; line-height: 1.5em;">can and should</strong><span style="font-size: 13px; line-height: 1.5em;">&nbsp;join these teams if they want to help run a certain part of the Dojo.</span></p>
+    {% endautoescape %}
+  </div>
+
+{% endblock %}
+
+{% block side %}
+  <ul id="side">
+    <li><a href="/attend"><img src="/static/images/next.png" width="231" height="41" /></a></li>
+  </ul>
+{% endblock %}

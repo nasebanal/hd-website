@@ -17,7 +17,7 @@
     <div id="content">
 
         <div class="language">
-            <a href="/">{{text.lang_local}}</a> | <a href="/lang/default">{{text.lang_default}}</a>
+            <a href="/local/{{pagename}}">{{text.lang_local}}</a> | <a href="/default/{{pagename}}">{{text.lang_default}}</a>
         </div>
         <hr class="black"/>
 
@@ -26,10 +26,10 @@
 
             <nav>
                 {% comment %}<a href="http://signup.hackerdojo.com/dashboard">Login</a>{% endcomment %}
-		<a href="/Give">{{text.menu_give}}</a>
-		<a href="/Contact">{{text.menu_contact}}</a>
-		<a href="/About">{{text.menu_about}}</a>
-		<a href="/Membership">{{text.menu_membership}}</a>
+        <a href="/{{locale}}/Give">{{text.menu_give}}</a>
+        <a href="/{{locale}}/Contact">{{text.menu_contact}}</a>
+        <a href="/{{locale}}/About">{{text.menu_about}}</a>
+        <a href="/{{locale}}/Membership">{{text.menu_membership}}</a>
         <a href="{{text.menu_events_url}}">{{text.menu_events}}</a>
         <a href="{{text.menu_dashboard_url}}">{{text.menu_dashboard}}</a>
             </nav>
